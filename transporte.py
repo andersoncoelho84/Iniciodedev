@@ -52,3 +52,8 @@ c1 = Carro('Honda', 'Civic', '11111', 'aaaaa', 'preto', 2009, 4)
 
 c1.acelerar()
 c1.detalhes()
+
+
+
+
+
