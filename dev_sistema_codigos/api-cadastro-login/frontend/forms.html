@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(32, 172, 51); //* Pode usar nome, código HEX ou RGB */
+        }
+    </style>
+</head>
+<body >
+
+    <h1>
+        Cadastro de Usúario
+    </h1>
+    <p>
+        Preencha os campos abaixo
+    </p>
+    <form id="formsCadastro">
+        <label for="nome">Digite seu nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome"  prequired>
+
+        <br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Digite seu email">
+
+        <br>
+
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" placeholder="Digite sua senha" >
+
+        <br>
+
+        <label for="senha2">Redigite sua Senha:</label>
+        <input type="password" name="senha2" id="senha2" required placeholder="Confirme sua senha">
+
+        <br>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Resetar</button>
+
+    </form>
+
+    <script>
+        //Pegar os dados do formulario                                                   Evitar de recarregar a pagina
+        document .getElementById("formCadastro").addEventListener("submit", function(e){e.preventDefault() 
+            const nome = document.getElementById('nome').value 
+            const email = document.getElementById("email").value 
+            const senha = document.getElementById("senha").value
+            const senha2 = document.getElementById("senha2").value
+          
+        if (senha !== senha2){
+            alert("Senhas não coincidem")
+        }
+         else{
+                    console.log('O Usuário foi criado')
+                    console.log("Nome: " + nome)
+                    alert("O Usuário foi criado\n \
+                    com o nome "+ nome)
+                }
+            }
+        )
+    
+    </script>
+</body>
+</html>
