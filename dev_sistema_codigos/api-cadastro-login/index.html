@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Geovanni's Pizza - Cadastro</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<h1>Cadastro de Usuário</h1>
+
+		<div id="mensagem" class="mensagem"></div>
+
+		<form id="formCadastro" onsubmit="cadastrarUsuario(event)">
+			<label for="nome">Nome:</label>
+			<input
+				type="text"
+				id="nome"
+				name="nome"
+				placeholder="Digite seu nome"
+				required
+				minlength="3"
+			/>
+
+			<label for="email">Email:</label>
+			<input
+				type="email"
+				id="email"
+				name="email"
+				placeholder="Digite seu email"
+				required
+			/>
+
+			<label for="senha">Senha:</label>
+			<input
+				type="password"
+				id="senha"
+				name="senha"
+				placeholder="Digite sua senha"
+				required
+				minlength="8"
+			/>
+
+			<button type="submit">Cadastrar</button>
+			<button type="reset">Limpar</button>
+		</form>
+
+		<table id="tabela-usuarios">
+			<thead> 
+				<!-- thead -> cabeçalho da tabela
+				titulo das colunas -->
+				<tr>
+					<!-- tr (table Row) -> linha da tabela -->
+					<!-- th (table header) -> escreva o nome
+					de cada coluna -->
+					<th>ID</th>
+					<th>Nome</th>
+					<th>Email</th>
+					<th>Data de Criação</th>
+					<!-- Voltaremos aqui para adicionar mais
+					uma coisa -->
+				</tr>
+			</thead>
+			<!-- Depois da cabeça vem o que?
+			o corpo -> tbody -->
+			<tbody id="conteudo-tabela">
+				<!-- Isso vai ser escrito no JS -->
+			</tbody>
+		</table>
+
+		<script src="script.js"></script>
+	</body>
+</html>
